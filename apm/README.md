@@ -37,17 +37,14 @@ Complete the [springboot-sample tutorial](../springboot-sample/) to set up a con
 
 #### Prepare Notes ####
 There will be a number of keys, urls, and URI strings that you will need to keep track of across the setup process. To keep this clear in your head, create a Snippet (in a separate browser window/tab) or a text file with the following template, which we will fill in as we go along.
-```
-Maven Base URL:
-Agent Install Zip Path:
 
-AGENTINSTALL_ZIP_URL:
+	  Maven Base URL:
+	  Agent Install Zip Path:
+	  AGENTINSTALL_ZIP_URL:
+	  AGENT_REGISTRATION_KEY:
+	  URI Prefix:
+	  WAR_FILE:
 
-AGENT_REGISTRATION_KEY:
-
-URI Prefix:
-WAR_FILE:
-```
 ![](images/snippet.png)
 
 #### Download the Oracle Management Cloud Master Installer & Registration Key ####
@@ -100,13 +97,13 @@ Now we'll return to our previous build and modify its configuration to run our A
 First, come up with a short unique string (like your name or tenant identity domain) that will be used as the URI prefix for you application. Enter your chosen string as *URI Prefix* in your notes. Use the prefix as the name of your war file by appending ".war" to the end, like "trial021.war". Record this name as WAR_FILE in your notes.
 
 Return to the `springboot_build` build job and navigate to its **Configure** section. Add a new **Execute shell** build step. Refer back to the full URL to our installer within Maven, the registration key that we collected in the previous steps, and your chose war file name. Substitute them into the appropriate <> within the Command as follows:
-```
-export AGENTINSTALL_ZIP_URL=<AGENTINSTALL_ZIP_URL from your notes>
-export AGENT_REGISTRATION_KEY=<AGENT_REGISTRATION_KEY from your notes>
-export WAR_FILE=<WAR_FILE from your notes>
-cd apm
-./build.sh
-```
+
+		export AGENTINSTALL_ZIP_URL=<AGENTINSTALL_ZIP_URL from your notes>
+		export AGENT_REGISTRATION_KEY=<AGENT_REGISTRATION_KEY from your notes>
+		export WAR_FILE=<WAR_FILE from your notes>
+		cd apm
+		./build.sh
+
 ![](images/build-steps.png)
 
 This build script will generate `apm/application.zip`, so we will need to update the **Post Build** configuration appropriately, and then **Save**
@@ -136,7 +133,7 @@ Point your browser at:
 
 Verify that the springboot-sample looks the same as it did before.
 
-Next, let's what's going on in the page. In Chrome or Firefox, press Control-Shift-I to bring up the browser inspector. With the inspector open, visit the following URL:
+Next, let's see what's going on in the page. In Chrome or Firefox, press Control-Shift-I to bring up the browser inspector. With the inspector open, visit the following URL:
 
 ```https://<your ACCS URL>/<URI prefix>/angular.html```
 
@@ -168,7 +165,7 @@ Now you can see the landing page of APM. This is a dashboard which contains the 
 Open the navigation menu and select pages. You can see all of the pages for APM. Filter the page data by your URI Prefix and set the time frame to the last 15 minutes:
 ![](images/APMPageFilter.png)
 
-You can see the pages for your specific application. Similarlly you can filter requests by deployment and only see the requests for your deployment. 
+You can see the pages for your specific application. Similarlly you can filter requests by deployment and only see the requests for your deployment.
 
 Try use the product and navigate the APM UI answer the following questions:
 

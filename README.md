@@ -19,6 +19,10 @@ NOTE: Before you start to use your new Oracle Public Cloud services make sure th
 
 
 ----
+####Getting started####
+
++ [Build and deploy a simple Java application directly to Application Container Cloud Service](java-helloworld/java-helloworld.md)
+
 
 ####Support SpringBoot application development lifecycle using Oracle Developer Cloud Service, Application Container Cloud Service and Oracle Enterprise Pack For Eclipse####
 
