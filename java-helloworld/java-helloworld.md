@@ -118,9 +118,10 @@ Deploying the Application to ACCS
 ![Create an ACCS application](images/image05.png)
 6. Choose Java as your runtime.
 ![Choose Java as your runtime](images/image06.png)
-7. Provide a name, select `upload application archive`, select a the file from
-the target folder named `javaspark-hello-0.0.1-SNAPSHOT-dist.zip` and press
-Create.
-![Provide application details and create"](images/image07.png)
-8. Your application will be deployed and, when provisioning is complete, you
+7. Provide a name, select `Upload application archive`.
+![Provide a name, select `Upload application archive`](images/image07.png)
+8. Select the file from the target folder named
+`javaspark-hello-0.0.1-SNAPSHOT-dist.zip` and press Create.
+![Select the file from the target folder named `javaspark-hello-0.0.1-SNAPSHOT-dist.zip` and press Create](images/image08.png)
+9. Your application will be deployed and, when provisioning is complete, you
  can use the application URL to open the application in your browser.

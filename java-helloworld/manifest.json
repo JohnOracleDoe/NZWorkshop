@@ -1,4 +1,4 @@
 {
   "runtime": { "majorVersion": "8"},
-  "command": "java -jar javaspark-hello-0.0.1-SNAPSHOT-jar-with-dependencies.jar",
+  "command": "java -jar javaspark-hello-0.0.1-SNAPSHOT-jar-with-dependencies.jar"
 }
